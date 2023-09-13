@@ -6,7 +6,7 @@ from tkinter import ttk
 pytesseract.pytesseract.tesseract_cmd = r'C:\Users\Auxiliarconta\AppData\Local\Tesseract-OCR\tesseract.exe'
 
 image = cv2.imread('Pana1857.jpg')
-text = pytesseract.image_to_string(image, config='--psm 1 --oem 3') #, lang='spa+eng')
+text = pytesseract.image_to_string(image, config='--psm 1 --oem 3') 
 
 char = text.splitlines()
 char_clean=[s for s in char if s !='']
