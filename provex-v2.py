@@ -5,12 +5,12 @@ from tkinter import ttk
 
 pytesseract.pytesseract.tesseract_cmd = r'C:\Users\Auxiliarconta\AppData\Local\Tesseract-OCR\tesseract.exe'
 
-image = cv2.imread('Pana1857.jpg')
+image = cv2.imread('Image.jpg')
 text = pytesseract.image_to_string(image, config='--psm 1 --oem 3') 
 
 char = text.splitlines()
 char_clean=[s for s in char if s !='']
-subarray_size=25
+subarray_size=len(char_clean)
 
 def takes(arreglo):
     subarrays = []
